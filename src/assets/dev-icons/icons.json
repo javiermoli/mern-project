@@ -1,0 +1,82 @@
+[
+  {
+    "name": "android",
+    "tags": ["os", "mobile"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "angularjs",
+    "tags": ["framework", "javascript"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "apple",
+    "tags": ["brand", "mobile"],
+    "versions": {
+      "svg": ["original"],
+      "font": ["original"]
+    }
+  },
+  {
+    "name": "atom",
+    "tags": ["editor"],
+    "versions": {
+      "svg": ["original", "original-wordmark"],
+      "font": ["original"]
+    }
+  },
+  {
+    "name": "bootstrap",
+    "tags": ["css", "framework"],
+    "versions": {
+      "svg": ["plain", "plain-wordmark"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "c",
+    "tags": ["language"],
+    "versions": {
+      "svg": ["original", "plain", "line"],
+      "font": ["plain"]
+    }
+  },
+  {
+    "name": "chrome",
+    "tags": ["browser"],
+    "versions": {
+      "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+      "font": ["plain"]
+    }
+  },
+  {
+  "name": "git",
+  "tags": ["version-control"],
+  "versions": {
+    "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+    "font": ["plain"]
+  }
+},
+{
+  "name": "javascript",
+  "tags": ["programming", "language"],
+  "versions": {
+    "svg": ["original", "plain"],
+    "font": ["plain"]
+  }
+},
+{
+  "name": "ruby",
+  "tags": ["programming", "language"],
+  "versions": {
+    "svg": ["original", "original-wordmark", "plain", "plain-wordmark"],
+    "font": ["plain"]
+  }
+}
+]
