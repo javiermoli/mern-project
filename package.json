@@ -1,0 +1,37 @@
+{
+  "name": "meen-project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/icons": "^1.0.0-beta.42",
+    "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
+    "debug": "^3.1.0",
+    "devicon": "^2.0.0",
+    "express": "^4.16.3",
+    "material-ui": "^1.0.0-beta.40",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "moment": "^2.22.0",
+    "nodemon": "^1.17.3",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-moment": "^0.7.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "url-join": "^4.0.0"
+  },
+  "proxy": "http://localhost:4040/",
+  "scripts": {
+    "start": "concurrently -r \"npm run start:server\" \"npm run start:client \"",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "start:server": "NODE_ENV=development SET NODE_ENV=development DEBUG=platzi-overflow* & nodemon server/index.js --exec babel-node",
+    "start:client": "react-scripts start"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
