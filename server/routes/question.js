@@ -12,21 +12,39 @@ const question = {
   user:{
     firstName:'Javier',
     lastName:'Molinas',
-    email:'javonolinas91@gmail.com',
+    email:'javomolinas91@gmail.com',
     password:'123456'
   }
 }
 
 const questions = new Array(10).fill(question)
 
-//api/questions
+// GET api/questions
 app.get('/', (req, res) => res.status(200).json(questions))
 
 
-//api/questions/:id
+// GET api/questions/:id
 
 app.get('/:id', (req, res) => {
-  setTimeout(() =>{ res.status(200).json(question) }, 1000)
+  const { id }= req.params // es lo mismo que esto: const id = req.params.id
+  const q = questions.find(({ _id }) => _id === +id) // otra forma: questions.find(({ _id }) => _id === +id)
+  res.status(200).json(q)
+})
+
+// POST api/questions
+app.post('/', (req, res) => {
+  const question = req.body
+  question._id = +new Date()
+  question.user = {
+    email:'javomolinas91@gmail.com',
+    password:'123456',
+    firstName: 'Javier',
+    lastName:'Molinas',
+  }
+  question.createdAt= new Date();
+  question.answers = [];
+  questions.push(question);
+  res.status(201).json(question);
 })
 
 

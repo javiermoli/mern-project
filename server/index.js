@@ -2,7 +2,7 @@ import http from 'http'
 import Debug from 'debug'
 import app from './app'
 
-const PORT = 4040
+const PORT = 3001
 const debug = new Debug('platzi-overflow:root')
 
 /*const app = http.createServer((req,res) => {

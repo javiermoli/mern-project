@@ -60,7 +60,6 @@ class QuestionForm extends React.Component {
          noValidate autoComplete="off"
          ref={el => {
           formVal  = el}}
-
          onSubmit={(e) => {
             e.preventDefault();
             this.props.onSubmit(titleVal.value, descriptionVal.value, checkedVal.value)

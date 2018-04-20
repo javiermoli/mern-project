@@ -29,9 +29,9 @@ class App extends Component {
          <div>
            <Route exact path='/' component={HomeSignIn}/>
            <Route path='/create-account' component={CreateAccountHome}/>
+           <Route exact path='/question-home' component={QuestionHome}/>
            <Switch>
-             <Route exact path='/question-home' component={QuestionHome}/>
-             <Route path='/question-home/:number' component={HomeQuestionAnswer}/>
+            <Route path='/question-home/:number' component={HomeQuestionAnswer}/>
            </Switch>
          </div>
        </Router>

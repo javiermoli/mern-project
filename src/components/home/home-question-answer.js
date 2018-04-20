@@ -18,30 +18,30 @@ class HomeQuestionAnswer extends Component {
       name:'Javier Molinas',
       title:'',
       description:'',
-      spinned:true
+      spinner:true
     }
   }
 
   componentDidMount() {
-    const http = "http://localhost:4040/api"
-    fetch(urljoin('/api/questions/:id'))
+    //const http = "http://localhost:3001/api"
+    fetch(urljoin('api/questions/:id'))
       .then(res => res.json())
       .then(
         (result) => {
-        //this.state.questions.push(result)
         console.log(result);
 
           this.setState({
             title:result.title,
-            description:result.description
+            description:result.description,
+            spinner:false
           })
-
+        
         },
          //Note: it's important to handle errors here
          //instead of a catch() block so that we don't swallow
          //exceptions from actual bugs in components.
         (error) => {
-          console.log(`Error ${error} ${error.status}`);
+          console.log(`Error: ${error} `);
         }
       )
     }
@@ -59,7 +59,7 @@ class HomeQuestionAnswer extends Component {
          <div>
            <Header/>
             {
-              this.state.title === ''
+              this.state.spinner === true
               ?<CircularProgress size={50}/>
               :<Question dateToFormat={dateToFormat} title={this.state.title} description={this.state.description}/>
             }

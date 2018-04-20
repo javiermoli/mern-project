@@ -18,8 +18,8 @@ class HomeQuestionAnswer extends Component {
   }
 
   componentDidMount() {
-    const http = "http://localhost:4040/api"
-    fetch('api/questions')
+    const http = "http://localhost:3001/api/questions"
+    fetch('/api/questions')
       .then(res => res.json())
       .then(
         (result) => {
@@ -34,7 +34,7 @@ class HomeQuestionAnswer extends Component {
          //instead of a catch() block so that we don't swallow
          //exceptions from actual bugs in components.
         (error) => {
-          console.log(`Error ${error} ${error.status}`);
+          console.log(`Error: ${error}`);
         }
       )
     }
